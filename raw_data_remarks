@@ -1,0 +1,30 @@
+Metadata about the "raw" data downloaded from the hbctraining scrnaseq tutorial in July / Aug 2021
+
+The hbctraining people have explained how they generated the "raw" data files: 
+"This dataset is available on GEO (GSE96583), however the available counts matrix lacked mitochondrial reads, so we downloaded the BAM files from the SRA (SRP102802). These BAM files were converted back to FASTQ files, then run through Cell Ranger to obtain the count data that we will be using."
+
+The citation to the original paper: Kang, H., Subramaniam, M., Targ, S. et al. Multiplexed droplet single-cell RNA-sequencing using natural genetic variation. Nat Biotechnol 36, 89–94 (2018). https://doi.org/10.1038/nbt.4042
+
+From the hbctraining tutorial we learn the foll:
+
+"In addition to the raw data, we also need to collect information about the data; this is known as metadata. There is often a temptation to just start exploring the data, but it is not very meaningful if we know nothing about the samples that this data originated from.
+
+Some relevant metadata for our dataset is provided below:
+
+The libraries were prepared using 10X Genomics version 2 chemistry
+The samples were sequenced on the Illumina NextSeq 500
+PBMC samples from eight individual lupus patients were separated into two aliquots each.
+One aliquot of PBMCs was activated by 100 U/mL of recombinant IFN-β for 6 hours.
+The second aliquot was left untreated.
+After 6 hours, the eight samples for each condition were pooled together in two final pools (stimulated cells and control cells). We will be working with these two, pooled samples. (We did not demultiplex the samples because SNP genotype information was used to demultiplex in the paper and the barcodes/sample IDs were not readily available for this data. Generally, you would demultiplex and perform QC on each individual sample rather than pooling the samples.)
+12,138 and 12,167 cells were identified (after removing doublets) for control and stimulated pooled samples, respectively.
+
+Since the samples are PBMCs, we will expect immune cells, such as:
+B cells
+T cells
+NK cells
+monocytes
+macrophages
+possibly megakaryocytes
+
+None of the above cell types are expected to be low complexity or anticipated to have high mitochondrial content."
